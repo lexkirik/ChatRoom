@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.lexkirik.chatroom.screen.ChatRoomListScreen
 import com.lexkirik.chatroom.screen.LogInScreen
 import com.lexkirik.chatroom.screen.Screen
 import com.lexkirik.chatroom.screen.SignUpScreen
@@ -33,6 +34,10 @@ fun Navigation(
                 onSignInSuccess = {}
             )
             navController.navigate(Screen.ChatRoomsScreen.route)
+        }
+
+        composable(Screen.ChatRoomsScreen.route) {
+            ChatRoomListScreen()
         }
     }
 }
