@@ -8,7 +8,7 @@ import com.lexkirik.chatroom.data.Result.Error
 import com.lexkirik.chatroom.data.Result.Success
 import com.lexkirik.chatroom.data.Room
 import com.lexkirik.chatroom.data.RoomRepository
-import com.lexkirik.chatroom.data.UserRepository.Injection
+import com.lexkirik.chatroom.Injection
 import kotlinx.coroutines.launch
 
 class RoomViewModel: ViewModel() {

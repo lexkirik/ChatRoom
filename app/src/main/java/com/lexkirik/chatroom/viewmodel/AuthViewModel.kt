@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseAuth
 import com.lexkirik.chatroom.data.Result
 import com.lexkirik.chatroom.data.UserRepository
-import com.lexkirik.chatroom.data.UserRepository.Injection
+import com.lexkirik.chatroom.Injection
 import kotlinx.coroutines.launch
 
 class AuthViewModel: ViewModel() {

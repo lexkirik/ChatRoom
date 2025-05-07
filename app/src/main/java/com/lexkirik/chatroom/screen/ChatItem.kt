@@ -1,7 +1,6 @@
 package com.lexkirik.chatroom.screen
 
 import android.os.Build
-import android.os.Message
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -20,6 +19,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lexkirik.chatroom.R
+import com.lexkirik.chatroom.data.Message
 import java.time.Instant
 import java.time.LocalDateTime
 import java.time.ZoneId

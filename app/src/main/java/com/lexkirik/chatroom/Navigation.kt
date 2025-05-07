@@ -1,15 +1,19 @@
 package com.lexkirik.chatroom
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.lexkirik.chatroom.screen.ChatRoomListScreen
+import com.lexkirik.chatroom.screen.ChatScreen
 import com.lexkirik.chatroom.screen.LogInScreen
 import com.lexkirik.chatroom.screen.Screen
 import com.lexkirik.chatroom.screen.SignUpScreen
 import com.lexkirik.chatroom.viewmodel.AuthViewModel
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun Navigation(
     navController: NavHostController,
@@ -37,7 +41,15 @@ fun Navigation(
         }
 
         composable(Screen.ChatRoomsScreen.route) {
-            ChatRoomListScreen()
+            ChatRoomListScreen{
+                navController.navigate("${Screen.ChatScreen.route}/${it.id}")
+            }
+        }
+
+        composable("${Screen.ChatScreen.route}/{roomID}") {
+            val roomID: String = it
+                .arguments?.getString("roomID") ?: ""
+            ChatScreen(roomID = roomID)
         }
     }
 }
